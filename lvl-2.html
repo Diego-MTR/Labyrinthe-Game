@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="game.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>Labyrinthe Game</title>
+</head>
+<style>
+  body {
+      background-image: url('background2.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0; /* Supprime les marges par défaut du corps */
+      padding: 0; /* Supprime le rembourrage par défaut du corps */
+      height: 97.8vh; /* Définit la hauteur du corps sur 100% de la hauteur de la fenêtre */
+      overflow-y: auto; /* Active la barre de défilement verticale si le contenu dépasse la hauteur de la fenêtre */
+      color: white;
+  }
+</style>
+<body>
+    <h1>Niveau 2</h1>
+    <div id="inventory">Clés: 0</div>
+    <p id="move-count">Mouvements: 0</p>
+    <p id="timer">Temps écoulé: 0 secondes</p>
+  <canvas id="canvas"></canvas>
+  <div id="endGameMessage">
+    <h1>Fin du jeu</h1>
+    <p>Bravo ! Vous avez récupéré toutes les clés et atteint la porte de sortie.</p>
+  </div>
+  <script src="lvl-2.js"></script>
+</body>
+</html>

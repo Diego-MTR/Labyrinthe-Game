@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Couleur de fond de la page */
+    color: #fff; /* Couleur du texte */
+    margin: 0;
+    padding: 0;
+  }
+
+h1 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+.card {
+  position: relative; /* Pour positionner les éléments enfants */
+  width: 300px;
+  margin: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Pour que le cache noir soit masqué */
+  border-radius: 10px;
+  border-style: solid;
+}
+
+
+.card img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease; /* Animation de transition pour l'image */
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Zoom sur l'image lors du survol */
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.3s ease; /* Animation de transition pour l'opacité */
+}
+
+.card:hover::before {
+  opacity: 1; /* Afficher le fond noir semi-transparent lors du survol */
+}
+
+.lock-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px; /* Taille du logo de cadenas */
+  color: #fff;
+  opacity: 0; /* Masqué par défaut */
+  transition: opacity 0.3s ease; /* Animation de transition pour l'opacité */
+}
+
+.card:hover .lock-icon {
+  opacity: 1; /* Afficher le logo de cadenas lors du survol */
+}
+
+  /* Ajout de styles pour l'icône et le texte de connexion */
+  .user-info {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-name {
+    font-size: 14px;
+    margin: 0;
+    display: none;
+  }
+  
+  /* Ajout de styles pour agrandir l'icône */
+  .icon-large {
+    font-size: 40px; /* Ajustez la taille de l'icône selon vos préférences */
+  }
+  
+  /* Définition du style des liens */
+  a {
+    color:#007bff;
+    text-decoration: none; /* Supprimez le soulignement par défaut */
+  }
+  
+  /* Définition du style des liens au survol */
+  a:hover {
+    color: #00b324;
+  }
+  

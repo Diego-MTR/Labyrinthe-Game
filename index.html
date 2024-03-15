@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labyrinthe Game</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Ajout de la bibliothèque Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Bienvenue dans Labyrinthe Time !</h1>
+    <p>Pourriez-vous vous échapper en un temps record ?</p>
+    <button onclick="startGame()">Commencer</button>
+  </div>
+
+  <!-- Ajout de l'élément pour l'icône et le texte de connexion -->
+  <div class="user-info">
+    <a href="logout.php">
+      <!-- Utilisation de l'icône de Boxicons -->
+      <i class='bx bx-user icon-large'></i>
+    </a>
+  </div>
+
+  <script>
+    function startGame() {
+      window.location.href = "lobby.html";
+    }
+
+    // Fonction pour afficher le nom d'utilisateur après la connexion
+    function showUsername(username) {
+      document.querySelector('.user-name').style.display = 'block';
+      document.getElementById('username').textContent = username;
+    }
+  </script>
+
+</body>
+
+</html>

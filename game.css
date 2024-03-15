@@ -1,0 +1,54 @@
+canvas {
+  display: block;
+  margin: auto;
+  background-color: #f0f0f0; /* Couleur de fond légèrement plus claire */
+  border: 2px solid #333; /* Bordure plus sombre */
+  border-radius: 5px; /* Coins arrondis */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+#endGameMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8); /* Opacité légèrement plus forte */
+  color: #fff; /* Texte en blanc */
+  padding: 20px;
+  border-radius: 8px; /* Coins arrondis un peu plus marqués */
+  text-align: center;
+  display: none; /* Caché par défaut */
+}
+
+
+
+/* Centrer le titre */
+h1 {
+  text-align: center;
+  margin-top: 20px; /* Ajoute un espace en haut du titre */
+  font-size: 24px; /* Taille de police légèrement augmentée */
+}
+
+/* Centrer le div d'inventaire */
+#inventory {
+  text-align: center;
+  margin-top: 10px; /* Espacement par rapport au titre */
+  font-size: 16px; /* Taille de police légèrement réduite */
+}
+
+/* Centrer le paragraphe de comptage de mouvements */
+#move-count {
+  text-align: center;
+  margin-top: 10px; /* Espacement par rapport à l'inventaire */
+  font-size: 16px; /* Taille de police cohérente */
+}
+
+/* Centrer le paragraphe de minuterie */
+#timer {
+  text-align: center;
+  margin-top: 10px; /* Espacement par rapport au comptage de mouvements */
+  font-size: 16px; /* Taille de police cohérente */
+}
+
+
+

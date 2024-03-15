@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222; /* Couleur de fond de la page */
+  color: black; /* Couleur du texte */
+  margin: 0;
+  padding: 0;
+}
+
+  h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 50px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: calc(100% - 30px); /* Largeur moins la largeur de l'icône */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    float: left; /* Ajout de la flottabilité à gauche */
+    margin-bottom: 10px;
+}
+
+.password-input-container {
+    position: relative; /* Position relative pour placer l'icône */
+}
+
+.toggle-password {
+    position: absolute; /* Position absolue pour placer l'icône par rapport à son parent */
+    margin-left: -25px;
+    margin-top : 20px;
+    transform: translateY(-50%); /* Centrage vertical */
+    cursor: pointer;
+  }
+  
+  button {
+    margin-top: 50px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+    /* Ajout de styles pour l'icône et le texte de connexion */
+.user-info {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 14px;
+  margin: 0;
+  display: none;
+}
+
+/* Ajout de styles pour agrandir l'icône */
+.icon-large {
+  font-size: 40px; /* Ajustez la taille de l'icône selon vos préférences */
+}
+
+/* Définition du style des liens */
+a {
+  color:#007bff;
+  text-decoration: none; /* Supprimez le soulignement par défaut */
+}
+
+/* Définition du style des liens au survol */
+a:hover {
+  color: #00b324;
+}
