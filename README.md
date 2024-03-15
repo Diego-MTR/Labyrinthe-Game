@@ -1,4 +1,4 @@
-<img width = 1000px height = 400px src = labyrinthe.png>
+<img width = auto height = auto src = labyrinthe.png>
 
 **README - Projet de Création de Jeu Web - Labyrinthe Game**
 
