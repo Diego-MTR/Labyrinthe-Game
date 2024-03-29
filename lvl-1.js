@@ -325,12 +325,12 @@ function checkWinCondition() {
     let xpEarned = 0;
 
     // Déterminer l'XP en fonction du temps restant
-    if (timeRemaining > 50) {
+    if (timeRemaining > 10) {
       xpEarned = Math.min(30, 60); // Limiter à 60 XP maximum
-    } else if (timeRemaining > 30) {
+    } else if (timeRemaining > 5) {
       xpEarned = Math.min(10, 60); // Limiter à 60 XP maximum
-    } else if (timeRemaining > 20) {
-      xpEarned = Math.min(5, 60); // Limiter à 60 XP maximum
+    } else if (timeRemaining > 2) {
+      xpEarned = Math.min(5, 60 ); // Limiter à 60 XP maximum
     }
 
     if (xpEarned > 0) {
@@ -445,9 +445,9 @@ function manageExperienceFromMoves(moveCount) {
   let xpEarned = 0;
 
   // Déterminer l'XP en fonction du nombre de mouvements
-  if (moveCount < 100) {
+  if (moveCount < 20) {
     xpEarned = Math.min(30, 60); // Limiter à 60 XP maximum
-  } else if (moveCount < 150) {
+  } else if (moveCount < 50) {
     xpEarned = Math.min(60 - xpEarned, 20); // Limiter à 60 XP maximum
   }
 
