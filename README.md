@@ -38,3 +38,60 @@ Une base de données est mise en place pour gérer l'authentification des utilis
 - **Sauvegarde des Meilleurs Scores**: Les scores les plus élevés sont enregistrés dans la base de données et seront affichés dans un tableau des meilleurs scores. Cela encourage la compétition entre les joueurs et ajoute une dimension supplémentaire au jeu.
 
 
+# Instructions pour le jeu du labyrinthe
+
+Bienvenue dans le jeu du labyrinthe ! Ce README vous guidera à travers les étapes nécessaires pour installer et exécuter le jeu sur votre environnement local.
+
+## 1. Exporter le code source
+
+Tout d'abord, assurez-vous d'avoir le code source du jeu. Vous pouvez le télécharger à partir du dépôt Git ou l'extraire à partir de l'archive que vous avez.
+
+## 2. Installer WampServer
+
+Assurez-vous d'avoir installé WampServer sur votre système. WampServer est une plateforme de développement Web sous Windows qui vous permet d'exécuter localement des applications Web PHP.
+
+Vous pouvez télécharger WampServer à partir de [wampserver.com](http://www.wampserver.com/).
+
+Suivez les instructions d'installation fournies sur le site Web de WampServer.
+
+## 3. Se connecter à phpMyAdmin
+
+Une fois WampServer installé et en cours d'exécution, vous pouvez accéder à phpMyAdmin pour créer une base de données pour le jeu.
+
+- Ouvrez votre navigateur Web.
+- Accédez à l'URL suivante : [http://localhost/phpmyadmin/](http://localhost/phpmyadmin/)
+- Connectez-vous avec les informations suivantes :
+  - Nom d'utilisateur : `root`
+  - Mot de passe : (laissez le champ vide par défaut)
+
+## 4. Créer une base de données
+
+Après vous être connecté à phpMyAdmin, suivez ces étapes pour créer une nouvelle base de données pour le jeu :
+
+1. Cliquez sur l'onglet "Bases de données" dans le menu supérieur.
+2. Dans le champ "Créer une base de données", saisissez le nom `labyrinthe`.
+3. Cliquez sur le bouton "Créer".
+
+## 5. Importer le schéma de base de données
+
+Une fois la base de données créée, importez le schéma de base de données fourni avec le jeu. Vous devriez avoir un fichier SQL nommé `labyrinthe.sql`.
+
+1. Dans phpMyAdmin, sélectionnez la base de données `labyrinthe` que vous venez de créer.
+2. Cliquez sur l'onglet "Importer" dans le menu supérieur.
+3. Sélectionnez le fichier `labyrinthe.sql` à partir de votre système de fichiers.
+4. Cliquez sur le bouton "Exécuter" pour importer les tables et les données dans la base de données.
+
+## 6. Exécuter le jeu
+
+Après avoir suivi les étapes ci-dessus, vous êtes prêt à exécuter le jeu !
+
+- Placez le code source du jeu dans le répertoire approprié de votre serveur Web local. Habituellement, il s'agit du répertoire `www` dans le répertoire d'installation de WampServer.
+- Accédez à l'URL de votre jeu à partir de votre navigateur Web. Par exemple : [http://localhost/dossier/index.php](http://localhost/dossier/index.php)
+
+Vous devriez maintenant être en mesure de jouer au jeu du labyrinthe sur votre propre environnement local !
+
+---
+
+Assurez-vous de personnaliser les chemins et les détails spécifiques à votre jeu dans les instructions ci-dessus.
+
+
