@@ -14,16 +14,31 @@ let finish = []
 let mob = []
 
 const map = [
-  [3, 1, 0, 0, 0, 0, 0, 0, 1, 2],
-  [0, 1, 1, 0, 1, 0, 1, 0, 1, 0],
-  [0, 0, 0, 0, 1, 1, 1, 0, 1, 0],
-  [0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-  [0, 0, 0, 1, 3, 1, 0, 1, 1, 1],
-  [1, 1, 0, 1, 0, 1, 0, 0, 0, 0],
-  [0, 1, 0, 1, 0, 0, 0, 1, 1, 5],
-  [0, 1, 0, 0, 1, 0, 0, 1, 1, 1],
-  [0, 1, 1, 0, 1, 1, 0, 0, 0, 0],
-  [4, 0, 0, 0, 0, 0, 0, 1, 1, 3],
+[1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+[1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 0, 1, 2, 0, 1, 0, 0, 0, 0, 0, 1, 0],
+[0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+[0, 1, 1, 0, 1, 1, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],
+[0, 1, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1, 1, 0, 0],
+[1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 0],
+[1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0],
+[1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0],
+[1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0],
+[1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 3, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0],
+[0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 0],
+[1, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0],
+[1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0],
+[0, 1, 5, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0],
+[0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0],
+[1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 0, 0],
+[1, 1, 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0],
+[1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0],
+[2, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+[1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1],
+[1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+[0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 4, 1, 0, 1, 0],
+[0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1],
+[0, 0, 0, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 canvas.width = map[0].length * boxSize;
@@ -40,6 +55,7 @@ image_door.src = "door.png";
 image_bonus.src = "star.png";
 image_key.src = "key.png";
 image_door_open.src = "door.png";
+
 
 // Dessiner le labyrinthe et attribuer un identifiant unique à chaque clé
 // Ajout d'un identifiant unique à chaque clé lors de la création de la carte
@@ -247,7 +263,7 @@ function isInPlayerVision(x, y) {
   const distanceY = y - PJ[0].y;
   const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
   // Vérifier si la distance est inférieure au rayon du champ de vision (ici, boxSize * 2)
-  return distance < boxSize * 3;
+  return distance < boxSize * 2;
 }
 
 
@@ -325,20 +341,20 @@ function checkWinCondition() {
     let xpEarned = 0;
 
     // Déterminer l'XP en fonction du temps restant
-    if (timeRemaining > 50) {
+    if (timeRemaining > 30) {
       xpEarned = Math.min(30, 60); // Limiter à 60 XP maximum
-    } else if (timeRemaining > 30) {
-      xpEarned = Math.min(10, 60); // Limiter à 60 XP maximum
     } else if (timeRemaining > 20) {
+      xpEarned = Math.min(10, 60); // Limiter à 60 XP maximum
+    } else if (timeRemaining > 10) {
       xpEarned = Math.min(5, 60); // Limiter à 60 XP maximum
     }
 
     if (xpEarned > 0) {
       manageExperience(xpEarned);
-    }
 
-    // Rediriger l'utilisateur vers la page victoire.php sans afficher de message
-    window.location.href = 'victoire.php';
+      // Rediriger l'utilisateur vers la page victoire.php sans afficher de message
+      window.location.href = 'victoire.php';
+    }
   }
 }
 
@@ -398,7 +414,7 @@ function collectBonus(collectedBonus) {
 
 
 
-let remainingTime = 20; // Temps restant en secondes
+let remainingTime = 200; // Temps restant en secondes
 
 // Fonction pour mettre à jour le décompte du temps
 function updateCountdown() {

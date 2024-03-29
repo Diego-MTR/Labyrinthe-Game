@@ -36,7 +36,7 @@ button:hover {
   background-color: #00b324; /* Couleur de fond du bouton au survol */
 }
 
-/* Styles pour l'icône et le texte de connexion */
+/* Ajout de styles pour l'icône et le texte de connexion */
 .user-info {
   position: fixed;
   top: 10px;
@@ -51,7 +51,7 @@ button:hover {
   display: none;
 }
 
-/* Styles pour agrandir l'icône */
+/* Ajout de styles pour agrandir l'icône */
 .icon-large {
   font-size: 40px; /* Ajustez la taille de l'icône selon vos préférences */
 }
@@ -67,13 +67,34 @@ a:hover {
   color: #00b324;
 }
 
-/* Style pour le lien de création de compte */
-.create-account-link {
-  color: #007bff;
-  text-decoration: none;
+/* Styles pour les règles du jeu */
+/* Styles pour les règles du jeu */
+.rules {
+  margin-bottom: 5%;
+  text-align: center; /* Alignement du texte à gauche */
 }
 
-/* Style pour le lien de création de compte au survol */
-.create-account-link:hover {
-  color: #00b324;
+.rules h2 {
+  font-size: 24px;
+  margin-bottom: 10px; /* Espacement après le titre des règles */
+}
+
+.rules ul {
+  list-style: none;
+  padding-left: 0; /* Supprime les marges par défaut de la liste */
+}
+
+.rules ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+/* Couleur verte pour les clés */
+.key {
+  color: #00ff00; /* Vert */
+}
+
+/* Couleur jaune pour le bonus */
+.bonus {
+  color: #ffff00; /* Jaune */
 }

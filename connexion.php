@@ -1,15 +1,10 @@
-<?php 
+<?php
+// Paramètres de connexion à la base de données
+$servername = "localhost"; // Nom du serveur
+$username = "root"; // Nom d'utilisateur MySQL
+$password = ""; // Mot de passe MySQL
+$database = "labyrinthe"; // Nom de la base de données
 
-class Connexion {
-    public static function connect() {
-        try {
-            $db = new PDO("mysql:host=localhost;dbname=labyrinthe", "root", "root");
-            $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            return $db;
-        } catch (PDOException $e) {
-            // Log the error instead of echoing it
-            error_log("Connection failed: " . $e->getMessage());
-            return null;
-        }
-    }
-}
+// Connexion à la base de données
+$conn = new mysqli($servername, $username, $password, $database);
+?>

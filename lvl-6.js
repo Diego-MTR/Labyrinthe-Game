@@ -14,16 +14,36 @@ let finish = []
 let mob = []
 
 const map = [
-  [3, 1, 0, 0, 0, 0, 0, 0, 1, 2],
-  [0, 1, 1, 0, 1, 0, 1, 0, 1, 0],
-  [0, 0, 0, 0, 1, 1, 1, 0, 1, 0],
-  [0, 1, 1, 1, 1, 1, 0, 0, 0, 0],
-  [0, 0, 0, 1, 3, 1, 0, 1, 1, 1],
-  [1, 1, 0, 1, 0, 1, 0, 0, 0, 0],
-  [0, 1, 0, 1, 0, 0, 0, 1, 1, 5],
-  [0, 1, 0, 0, 1, 0, 0, 1, 1, 1],
-  [0, 1, 1, 0, 1, 1, 0, 0, 0, 0],
-  [4, 0, 0, 0, 0, 0, 0, 1, 1, 3],
+[0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],
+[0, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 2, 1, 1, 1, 0],
+[0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+[0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1, 0],
+[0, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0],
+[0, 1, 1, 2, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0],
+[0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 0],
+[0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 0],
+[0, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0],
+[0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 1, 1, 1, 0],
+[0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 1, 0, 1, 0],
+[0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1],
+[0, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0],
+[0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 0],
+[1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0],
+[0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 1, 0, 1, 0, 3, 0, 1, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0],
+[0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+[0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0],
+[0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 0, 0],
+[1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+[1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 1, 1, 0, 1, 5],
+[1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1],
+[1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1, 1, 0, 0, 1, 0, 0, 0],
+[1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 1, 1],
+[1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1],
+[0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0, 0],
+[1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 0],
+[0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+[0, 4, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0],
+[0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
 
 canvas.width = map[0].length * boxSize;
@@ -40,6 +60,7 @@ image_door.src = "door.png";
 image_bonus.src = "star.png";
 image_key.src = "key.png";
 image_door_open.src = "door.png";
+
 
 // Dessiner le labyrinthe et attribuer un identifiant unique à chaque clé
 // Ajout d'un identifiant unique à chaque clé lors de la création de la carte
@@ -81,7 +102,6 @@ function drawMap() {
   }
 }
 
-// Fonction pour collecter une clé
 function collectKey(collectedKey) {
   // Vérifier si la clé a déjà été collectée
   if (inventory.includes(collectedKey.id)) {
@@ -96,8 +116,17 @@ function collectKey(collectedKey) {
   // Ajouter l'identifiant de la clé à l'inventaire du joueur
   inventory.push(collectedKey.id);
 
+  function showAlert(message, duration) {
+    alert(message);
+    // Attendre le nombre de millisecondes spécifié avant de fermer l'alerte
+    setTimeout(function () {
+      // Fermer l'alerte
+      alert.close();
+    }, duration);
+  }
+
   // Afficher un message pop-up indiquant que le joueur a récupéré une clé
-  showAlert("Vous venez de récupérer une clé", 3000); // Afficher pendant 3 secondes
+  showAlert("Vous venez de récupérer une clé", 3000);
 
   // Mettre à jour l'affichage du nombre de clés collectées
   updateInventoryDisplay();
@@ -108,16 +137,6 @@ function collectKey(collectedKey) {
   }
 
   redrawGame(); // Redessiner le jeu pour que la clé disparaisse
-}
-
-// Définition de la fonction showAlert
-function showAlert(message, duration) {
-  var alertBox = alert(message);
-  // Attendre le nombre de millisecondes spécifié avant de fermer l'alerte
-  setTimeout(function(){
-      // Fermer l'alerte
-      alertBox.close();
-  }, duration);
 }
 
 
@@ -161,13 +180,13 @@ function movePlayer(dx, dy) {
   }
 
   // Vérifier si le joueur collecte un bonus
-for (let i = 0; i < mob.length; i++) {
-  const bonus = mob[i];
-  if (newX === bonus.x && newY === bonus.y) {
-    collectBonus(bonus);
-    return; // Sortir de la fonction après avoir trouvé un bonus
+  for (let i = 0; i < mob.length; i++) {
+    const bonus = mob[i];
+    if (newX === bonus.x && newY === bonus.y) {
+      collectBonus(bonus);
+      return; // Sortir de la fonction après avoir trouvé un bonus
+    }
   }
-}
 
   // Mettre à jour la position du joueur
   PJ[0].x = newX;
@@ -247,7 +266,7 @@ function isInPlayerVision(x, y) {
   const distanceY = y - PJ[0].y;
   const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
   // Vérifier si la distance est inférieure au rayon du champ de vision (ici, boxSize * 2)
-  return distance < boxSize * 3;
+  return distance < boxSize * 2;
 }
 
 
@@ -382,8 +401,8 @@ function collectBonus(collectedBonus) {
   // Ajouter le bonus à la liste des bonus collectés
   collectedBonuses.push(collectedBonus.id);
 
-    // Ajouter du temps au décompte
-    remainingTime += 10;
+  // Ajouter du temps au décompte
+  remainingTime += 10;
 
   // Afficher un message pop-up indiquant que le joueur a récupéré un bonus
   alert("Vous avez récupéré un bonus !");
@@ -391,14 +410,14 @@ function collectBonus(collectedBonus) {
   // Redessiner le jeu pour que le bonus disparaisse
   redrawGame();
 
-    // Mettre à jour le décompte du temps
-    updateCountdown();
+  // Mettre à jour le décompte du temps
+  updateCountdown();
 }
 
 
 
 
-let remainingTime = 20; // Temps restant en secondes
+let remainingTime = 300; // Temps restant en secondes
 
 // Fonction pour mettre à jour le décompte du temps
 function updateCountdown() {
@@ -420,7 +439,7 @@ const countdownInterval = setInterval(updateCountdown, 1000); // Mettre à jour 
 function manageExperience(xpEarned) {
   // Envoi de l'XP à la base de données via une requête AJAX
   const xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
+  xhr.onreadystatechange = function () {
     if (this.readyState === XMLHttpRequest.DONE) {
       if (this.status === 200) {
         // L'XP a été mise à jour avec succès
@@ -431,7 +450,7 @@ function manageExperience(xpEarned) {
       }
     }
   };
-  
+
   // Préparation de la requête POST
   xhr.open("POST", "update_experience.php", true);
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -445,9 +464,9 @@ function manageExperienceFromMoves(moveCount) {
   let xpEarned = 0;
 
   // Déterminer l'XP en fonction du nombre de mouvements
-  if (moveCount < 100) {
+  if (moveCount < 150) {
     xpEarned = Math.min(30, 60); // Limiter à 60 XP maximum
-  } else if (moveCount < 150) {
+  } else if (moveCount < 200) {
     xpEarned = Math.min(60 - xpEarned, 20); // Limiter à 60 XP maximum
   }
 
