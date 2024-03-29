@@ -65,7 +65,7 @@ if (isset($_SESSION['username'])) {
 function getLevelName($xp) {
     // Définir les seuils d'expérience pour chaque niveau
     $xpThresholds = array(
-        30 => "Niveau 2",
+        10 => "Niveau 2",
         80 => "Niveau 3",
         130 => "Niveau 4",
         150 => "Niveau 5",
