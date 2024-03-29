@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="game.css">
+  <link href="https://unpkg.com/boxicons@2.1.0/css/boxicons.min.css" rel="stylesheet">
+  <title>Labyrinthe Game</title>
+  <style>
+    body {
+      background-image: url('background4.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      /* Supprime les marges par défaut du corps */
+      padding: 0;
+      /* Supprime le rembourrage par défaut du corps */
+      height: 97.8vh;
+      /* Définit la hauteur du corps sur 100% de la hauteur de la fenêtre */
+      overflow-y: auto;
+      /* Active la barre de défilement verticale si le contenu dépasse la hauteur de la fenêtre */
+      color: white;
+    }
+
+
+    /* Ajout de styles pour l'icône et le texte de connexion */
+    .user-info {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+      /* Ajustez la taille de l'icône selon vos préférences */
+    }
+
+    .user-info2 {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+      /* Ajustez la taille de l'icône selon vos préférences */
+    }
+
+    .user-name {
+      font-size: 14px;
+      margin: 0;
+      display: none;
+    }
+
+    /* Définition du style des liens */
+    a {
+      color: #007bff;
+      text-decoration: none;
+      /* Supprimez le soulignement par défaut */
+    }
+
+    /* Définition du style des liens au survol */
+    a:hover {
+      color: #00b324;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Niveau 4</h1>
+  <div id="inventory">Clés: 0</div>
+  <p id="move-count">Mouvements: 0</p>
+  <p id="countdown">Temps restant: 100 secondes</p>
+  <canvas id="canvas"></canvas>
+  <script src="lvl-4.js"></script>
+  <div class="user-info">
+    <a href="index.php">
+      <!-- Utilisation de l'icône de Boxicons -->
+      <i class='bx bx-home icon-large'></i>
+    </a>
+  </div>
+  <div id="alertMessage"></div>
+  <div class="user-info2">
+    <a href="lobby.php">
+      <!-- Utilisation de l'icône de Boxicons -->
+      <i class='bx bx-left-arrow'></i>
+    </a>
+  </div>
+</body>
+
+</html>
