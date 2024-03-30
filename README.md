@@ -1,6 +1,6 @@
 <img width = auto height = auto src = labyrinthe.png>
 
-**README - Projet de Création de Jeu Web - Labyrinthe Game**
+**README - Projet de Création de Jeu Web - Labyrinthe Game -Dernier push le 30/03/2024 à 00h15**
 
 ---
 
